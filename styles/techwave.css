@@ -10,10 +10,6 @@ body {
   background-color: rgba(26, 11, 46, 1);
 }
 
-header {
-  height: 760px;
-}
-
 .font-inter {
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
@@ -26,6 +22,10 @@ header {
 
 .secondary-color {
   color: rgba(0, 255, 136, 1);
+}
+
+.f-size {
+  font-size: 16;
 }
 
 .section-title {
@@ -44,7 +44,7 @@ header {
   text-align: center;
 }
 
-button {
+.button {
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
   font-weight: 600;
@@ -64,6 +64,43 @@ button {
 /* main related styles */
 main {
   max-width: 1200px;
+}
+
+/* nav related styles */
+header {
+  height: 760px;
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+#nav-title {
+  color: #fb09b4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 200px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  opacity: 0.9;
 }
 
 /* .microphone-img {
