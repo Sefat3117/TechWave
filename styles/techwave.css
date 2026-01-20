@@ -15,6 +15,14 @@ body {
   font-optical-sizing: auto;
 }
 
+#hamburger-logo {
+  display: none;
+}
+
+.none {
+  display: none;
+}
+
 /* Shared Styles */
 .primary-color {
   color: rgba(255, 255, 255, 1);
@@ -50,7 +58,7 @@ body {
   font-weight: 600;
   line-height: 19px;
   text-transform: capitalize;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1.3rem;
   border-radius: 10000px;
   background: linear-gradient(
     47.64deg,
@@ -156,4 +164,72 @@ nav a {
   color: rgba(0, 255, 136, 1);
   background: none;
   border: 1px solid rgba(0, 255, 136, 1);
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+  #menu,
+  nav .button {
+    display: none;
+  }
+
+  #hamburger-logo {
+    display: block;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .banner-image-container {
+    max-width: 100%;
+  }
+
+  .microphone-img {
+    height: 300px;
+    background-size: 200px, 600px;
+    background-position:
+      center,
+      left -130px top 50px;
+  }
+
+  .microphone-img img {
+    width: 80px;
+  }
+
+  .banner {
+    height: 466px;
+  }
+
+  .banner-content {
+    max-width: 100%;
+    transform: translateY(-20px);
+    padding: 0px 5px 40px 5px;
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .button {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 19px;
+    text-transform: capitalize;
+    padding: 12.5px 20px;
+    border-radius: 10000px;
+    background: linear-gradient(
+      47.64deg,
+      rgba(247, 233, 63, 1),
+      rgba(251, 9, 180, 1),
+      rgba(145, 0, 248, 1)
+    );
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
 }
