@@ -191,9 +191,62 @@ hr {
 }
 
 .podcast-card-container {
+  margin-bottom: 120px;
   display: grid;
   grid-template-columns: repeat(4, 240px);
   justify-content: center;
+}
+
+.why-techwave-container {
+  margin-bottom: 120px;
+}
+
+.why-techwave-container > h2 {
+  margin-bottom: 40px;
+}
+
+.techwave-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  gap: 30px;
+}
+
+.techwave-info-box {
+  padding: 40px;
+  border-radius: 40px;
+  background: rgba(53, 17, 101, 0.4);
+  border: 2px solid firebrick;
+}
+
+.techwave-info-box img {
+  width: 50px;
+  padding-bottom: 21px;
+}
+
+.techwave-info-box h3 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: capitalize;
+  padding-bottom: 16px;
+}
+
+.techwave-info-box p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+#big-row {
+  grid-row: span 2;
+}
+
+#big-column {
+  grid-column: span 2;
 }
 
 /* Mobile Devices */
@@ -275,5 +328,23 @@ hr {
     grid-template-columns: repeat(2, 180px);
     column-gap: 20px;
     row-gap: 40px;
+  }
+
+  .why-techwave-container > h2 {
+    font-size: 32px;
+  }
+
+  .techwave-boxes {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  #big-row {
+    grid-row: span 1;
+  }
+
+  #big-column {
+    grid-column: span 1;
   }
 }
