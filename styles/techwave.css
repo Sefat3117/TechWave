@@ -76,7 +76,6 @@ body {
 /* nav related styles */
 header {
   height: 760px;
-  border: 3px solid green;
   margin-bottom: 60px;
 }
 
@@ -169,9 +168,6 @@ main {
   margin: 0 auto;
 }
 
-.podcast-container {
-}
-
 .podcast-heading {
   padding: 0 260px;
 }
@@ -197,11 +193,15 @@ hr {
   justify-content: center;
 }
 
-.why-techwave-container {
+.why-techwave-container,
+.episode,
+.meet-the-host {
   margin-bottom: 120px;
 }
 
-.why-techwave-container > h2 {
+.why-techwave-container > h2,
+.episode > h2,
+.meet-the-host > h2 {
   margin-bottom: 40px;
 }
 
@@ -216,7 +216,6 @@ hr {
   padding: 40px;
   border-radius: 40px;
   background: rgba(53, 17, 101, 0.4);
-  border: 2px solid firebrick;
 }
 
 .techwave-info-box img {
@@ -247,6 +246,60 @@ hr {
 
 #big-column {
   grid-column: span 2;
+}
+
+.episode-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.episode {
+  width: 100%;
+  background: rgba(53, 17, 101, 0.4);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.episode-content-info {
+  padding: 24px;
+}
+
+.episode-content-info h3 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  margin-bottom: 12px;
+}
+
+.episode-content-info p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.duration img {
+  width: 16px;
+}
+
+.duration > p {
+  color: rgba(0, 255, 136, 1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding-top: 10px;
 }
 
 /* Mobile Devices */
@@ -330,7 +383,9 @@ hr {
     row-gap: 40px;
   }
 
-  .why-techwave-container > h2 {
+  .why-techwave-container > h2,
+  .episode > h2,
+  .meet-the-host {
     font-size: 32px;
   }
 
@@ -346,5 +401,17 @@ hr {
 
   #big-column {
     grid-column: span 1;
+  }
+
+  .episode-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 20px;
+  }
+
+  .episode {
+    margin: 0;
   }
 }
