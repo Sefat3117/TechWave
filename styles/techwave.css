@@ -37,7 +37,6 @@ body {
 }
 
 .section-title {
-  font-style: Bold;
   font-size: 3rem;
   font-weight: 700;
   line-height: 58px;
@@ -50,6 +49,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   text-align: center;
+  opacity: 0.8;
 }
 
 .button {
@@ -73,14 +73,11 @@ body {
   gap: 5px;
 }
 
-/* main related styles */
-main {
-  max-width: 1200px;
-}
-
 /* nav related styles */
 header {
   height: 760px;
+  border: 3px solid green;
+  margin-bottom: 60px;
 }
 
 nav h2 {
@@ -138,7 +135,7 @@ nav a {
 .banner-content {
   max-width: 550px;
   margin: 0 auto;
-  transform: translateY(-80px);
+  transform: translateY(-90px);
   text-align: center;
 }
 
@@ -166,8 +163,45 @@ nav a {
   border: 1px solid rgba(0, 255, 136, 1);
 }
 
+/* main related styles */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.podcast-container {
+}
+
+.podcast-heading {
+  padding: 0 260px;
+}
+
+.podcast-heading h2 {
+  margin-bottom: 1rem;
+}
+
+.podcast-heading p,
+hr {
+  margin-bottom: 80px;
+}
+
+hr {
+  border: 1px solid rgba(255, 255, 255, 1);
+  opacity: 0.1;
+}
+
+.podcast-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  justify-content: center;
+}
+
 /* Mobile Devices */
 @media screen and (max-width: 576px) {
+  header {
+    height: 620px;
+  }
+
   #menu,
   nav .button {
     display: none;
@@ -186,11 +220,11 @@ nav a {
   }
 
   .microphone-img {
-    height: 300px;
+    height: 440px;
     background-size: 200px, 600px;
     background-position:
       center,
-      left -130px top 50px;
+      left -130px top 120px;
   }
 
   .microphone-img img {
@@ -203,7 +237,7 @@ nav a {
 
   .banner-content {
     max-width: 100%;
-    transform: translateY(-20px);
+    transform: translateY(-120px);
     padding: 0px 5px 40px 5px;
   }
 
@@ -213,23 +247,33 @@ nav a {
   }
 
   .button {
-    color: rgba(255, 255, 255, 1);
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 19px;
-    text-transform: capitalize;
     padding: 12.5px 20px;
-    border-radius: 10000px;
-    background: linear-gradient(
-      47.64deg,
-      rgba(247, 233, 63, 1),
-      rgba(251, 9, 180, 1),
-      rgba(145, 0, 248, 1)
-    );
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+  }
+
+  .btn-group {
+    flex-wrap: wrap;
+  }
+
+  .podcast-heading {
+    padding: 0 20px;
+  }
+
+  .podcast-heading h2 {
+    font-size: 32px;
+  }
+
+  .podcast-heading p {
+    margin-bottom: 40px;
+  }
+
+  hr {
+    max-width: 90%;
+    margin: 0 auto 40px auto;
+  }
+
+  .podcast-card-container {
+    grid-template-columns: repeat(2, 180px);
+    column-gap: 20px;
+    row-gap: 40px;
   }
 }
