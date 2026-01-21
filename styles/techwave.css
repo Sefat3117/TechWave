@@ -125,10 +125,27 @@ nav a {
   align-items: center;
   background-image: url(../assets/hero-circle.png), url(../assets/hero-bg.png);
   background-repeat: no-repeat;
-  background-size: 350px, 1600px;
+  background-size: 350px, cover;
   background-position:
     center,
-    left -130px top 0;
+    left 0 top 0;
+}
+
+#new-badge {
+  width: 75px;
+  color: rgba(26, 11, 46, 1);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  text-transform: capitalize;
+  padding: 8px 16px;
+  border-radius: 1000px;
+  box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
+  background: rgba(0, 255, 136, 1);
+  position: relative;
+  top: -400px;
+  left: 750px;
 }
 
 .banner-content {
@@ -201,7 +218,7 @@ hr {
 
 .why-techwave-container > h2,
 .episode > h2,
-.meet-the-host > h2 {
+.meet-the-host-container > h2 {
   margin-bottom: 40px;
 }
 
@@ -302,6 +319,124 @@ hr {
   padding-top: 10px;
 }
 
+.meet-the-host {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: rgba(53, 17, 101, 0.4);
+  padding: 40px;
+}
+
+.host-img {
+  width: 200px;
+}
+
+.host-img img {
+  width: 100%;
+}
+
+.host-content {
+  flex: 1;
+}
+
+.host-content h3 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.host-content p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.host-section-icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.host-section-icons > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid rgba(83, 60, 114, 1);
+}
+
+.host-section-icons img {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  padding: 120px 0;
+  background-image: url(../assets/footer-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.8rem;
+}
+
+#footer-title {
+  color: #fb09b4;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin-bottom: 2rem;
+}
+
+.footer-icons > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icons > div > img {
+  margin-right: 8px;
+  width: 24px;
+}
+
+.footer-icons > div > p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  opacity: 0.6;
+}
+
+footer small {
+  color: rgba(250, 250, 250, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
 /* Mobile Devices */
 @media screen and (max-width: 576px) {
   header {
@@ -327,14 +462,19 @@ hr {
 
   .microphone-img {
     height: 440px;
-    background-size: 200px, 600px;
+    background-size: 200px, contain;
     background-position:
       center,
-      left -130px top 120px;
+      top 150px left 0;
   }
 
   .microphone-img img {
     width: 80px;
+  }
+
+  #new-badge {
+    top: -300px;
+    left: 250px;
   }
 
   .banner {
@@ -372,6 +512,15 @@ hr {
     margin-bottom: 40px;
   }
 
+  .card-stats {
+    font-size: 40px;
+  }
+
+  .card-info {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+
   hr {
     max-width: 90%;
     margin: 0 auto 40px auto;
@@ -383,9 +532,15 @@ hr {
     row-gap: 40px;
   }
 
-  .why-techwave-container > h2,
-  .episode > h2,
+  .why-techwave-container,
+  .episode,
   .meet-the-host {
+    margin-bottom: 40px;
+  }
+
+  .why-techwave-container > h2,
+  .episodes > h2,
+  .meet-the-host-container > h2 {
     font-size: 32px;
   }
 
@@ -413,5 +568,43 @@ hr {
 
   .episode {
     margin: 0;
+  }
+
+  .meet-the-host-container {
+    padding: 20px;
+    padding-bottom: 5px;
+  }
+
+  .meet-the-host {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .host-content p {
+    text-align: center;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
+
+  footer h2 {
+    font-size: 42px;
+  }
+
+  .host-section-icons {
+    justify-content: center;
+  }
+
+  .footer-icons {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .footer-icons > div > img {
+    margin-right: 5px;
   }
 }
